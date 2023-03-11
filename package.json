@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --watch",
+    "buildOnce": "tsc",
     "test": "jest --coverage --collectCoverageFrom=src/**/*.ts",
     "dev": "concurrently --kill-others \"npm run build\" \"npm run start\"",
     "start": "nodemon dist/index.js --watch"
