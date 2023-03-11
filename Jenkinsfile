@@ -27,7 +27,7 @@ node {
         remote.user = root
         remote.identityFile = identity
         stage("Deploy") {
-            sshCommand remote: remote, command: 'docker-compose -f /home/nodejs-basic/docker-compose.yml up -d --build'
+            sshCommand remote: remote, command: 'docker-compose -f /home/website/docker-compose.yml up -d --build'
         }
     }
 }
