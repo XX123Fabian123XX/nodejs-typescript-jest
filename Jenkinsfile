@@ -26,7 +26,7 @@ node {
     withCredentials([sshUserPrivateKey(credentialsId: 'server', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'root')]) {
         remote.user = root
         remote.identityFile = identity
-        stage("SSH Steps Rocks!") {
+        stage("Deploy") {
             sshCommand remote: remote, command: 'docker-compose -f /home/nodejs-basic/docker-compose.yml up -d --build'
         }
     }
